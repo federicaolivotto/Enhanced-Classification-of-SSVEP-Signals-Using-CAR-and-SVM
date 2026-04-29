@@ -71,12 +71,12 @@ SVM replaces the traditional **maximum correlation classifier**, improving robus
 
 ## Results
 
-### 🔹 Effect of CAR
+### Effect of CAR
 - Increased SNR  
 - Clearer peaks at stimulus frequencies and harmonics  
 - Improved classification accuracy  
 
-### 🔹 Best Performance
+### Best Performance
 
 | Method | Accuracy | ITR |
 |--------|--------|-----|
