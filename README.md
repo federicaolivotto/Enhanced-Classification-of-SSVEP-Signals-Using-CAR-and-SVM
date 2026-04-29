@@ -1,7 +1,6 @@
-# 🧠 Enhanced Classification of SSVEP Signals  
-### Using Common Average Referencing and Support Vector Machines  
+# Enhanced Classification of SSVEP Signals Using Common Average Referencing and Support Vector Machines  
 
-## 📌 Overview
+## Overview
 This project focuses on improving the performance of **SSVEP-based Brain-Computer Interfaces (BCIs)** through enhanced signal preprocessing and classification techniques.
 
 The pipeline combines:
@@ -13,7 +12,7 @@ The proposed approach improves both **Signal-to-Noise Ratio (SNR)** and **classi
 
 ---
 
-## 🧪 Objectives
+## Objectives
 - Improve detection of SSVEP frequencies and harmonics  
 - Reduce noise in EEG signals  
 - Enhance classification performance beyond standard CCA  
@@ -21,7 +20,7 @@ The proposed approach improves both **Signal-to-Noise Ratio (SNR)** and **classi
 
 ---
 
-## 📊 Dataset
+## Dataset
 - **40-target SSVEP speller dataset**
 - **35 subjects**
 - **64 EEG channels**
@@ -35,7 +34,7 @@ Each trial duration:
 
 ---
 
-## ⚙️ Methodology
+## Methodology
 
 ### 1. Preprocessing
 - Selection of **9 occipital/parieto-occipital electrodes**  
@@ -43,7 +42,7 @@ Each trial duration:
 - Application of **Common Average Reference (CAR)**  
 - **Bandpass filtering (5–90 Hz)** using a Butterworth filter  
 
-👉 CAR significantly improves harmonic peak visibility in the frequency domain.
+--> CAR significantly improves harmonic peak visibility in the frequency domain.
 
 ---
 
@@ -70,7 +69,7 @@ SVM replaces the traditional **maximum correlation classifier**, improving robus
 
 ---
 
-## 📈 Results
+## Results
 
 ### 🔹 Effect of CAR
 - Increased SNR  
@@ -88,7 +87,7 @@ SVM replaces the traditional **maximum correlation classifier**, improving robus
 
 ---
 
-### ⏱️ Time Window Analysis
+### Time Window Analysis
 - Optimal window: **~2.5 seconds**
 - Trade-off:
   - Longer window → higher accuracy  
@@ -96,7 +95,7 @@ SVM replaces the traditional **maximum correlation classifier**, improving robus
 
 ---
 
-## 📊 Evaluation Metrics
+## Evaluation Metrics
 - Classification Accuracy  
 - Signal-to-Noise Ratio (SNR)  
 - Information Transfer Rate (ITR)  
@@ -105,7 +104,7 @@ SVM replaces the traditional **maximum correlation classifier**, improving robus
 
 ---
 
-## 🚀 Key Insights
+## Key Insights
 - CAR improves signal quality even when a reference electrode is already used  
 - SVM significantly enhances classification compared to standard CCA  
 - Combining signal processing + machine learning yields the best results  
@@ -113,14 +112,14 @@ SVM replaces the traditional **maximum correlation classifier**, improving robus
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 - Tested only on **offline benchmark dataset**  
 - No real-time validation  
 - ITR estimated assuming ideal timing conditions  
 
 ---
 
-## 🔮 Future Work
+## Future Work
 - Real-time BCI implementation  
 - Subject-specific calibration (individual templates)  
 - Adaptive / online learning models  
@@ -129,7 +128,7 @@ SVM replaces the traditional **maximum correlation classifier**, improving robus
 
 ---
 
-## 🛠️ Technologies
+## Technologies
 - **MATLAB** (main implementation)  
 - Signal Processing  
 - Machine Learning (SVM)  
@@ -137,11 +136,12 @@ SVM replaces the traditional **maximum correlation classifier**, improving robus
 
 ---
 
-## 👩‍💻 Author
+## Author
 **Federica Maria Olivotto**
+
 **Paolo Di Giglio**
 
 ---
 
-## 📎 Notes
+## Notes
 This repository contains the project report and supporting material for an academic study on SSVEP-based BCI systems.
