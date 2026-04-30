@@ -21,11 +21,11 @@ The repository includes both the **project report** and the **MATLAB implementat
 ├── apply_car_filter.m
 ├── myCCA.m
 ├── compute_accuracy.m
+├── concatenate_runs.m         % Concatenates trials across blocks
 ├── Freq_Phase.mat             % Stimulus frequencies and phases
 ├── README.md
 └── Report_SSVEP_CAR_stCCA_SVM.pdf                 % Project report
 ```
-
 ---
 
 ## Objectives
