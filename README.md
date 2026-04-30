@@ -12,6 +12,22 @@ The proposed approach improves both **Signal-to-Noise Ratio (SNR)** and **classi
 
 ---
 
+## Repository Structure
+The repository includes both the **project report** and the **MATLAB implementation**:
+
+```
+├── main.m                      % Main pipeline script
+├── generate_reference_signals.m
+├── apply_car_filter.m
+├── myCCA.m
+├── compute_accuracy.m
+├── Freq_Phase.mat             % Stimulus frequencies and phases
+├── README.md
+└── Report_SSVEP_CAR_stCCA_SVM.pdf                 % Project report
+```
+
+---
+
 ## Objectives
 - Improve detection of SSVEP frequencies and harmonics  
 - Reduce noise in EEG signals  
@@ -31,6 +47,9 @@ Each trial duration:
 - 0.5 s pre-stimulus  
 - 5 s stimulation  
 - 0.5 s post-stimulus  
+
+> The dataset is not included in this repository.  
+> You must download it separately and update the path in `main.m`.
 
 ---
 
@@ -55,18 +74,40 @@ Each trial duration:
 CCA extracts **correlation coefficients (ρ)** for each frequency → feature vector.
 
 ---
+### 3. Classification
+Two modes are available:
 
-### 3. Classification (SVM)
-- Multiclass classification using:
+#### ➤ Standard CCA
+- Classification based on **maximum correlation**
+
+#### ➤ CCA + SVM
+- Feature vectors (ρ) used as input to:
   - **Support Vector Machine (SVM)**
-  - **ECOC (Error-Correcting Output Codes)** strategy  
+  - **ECOC multiclass strategy**
 
 #### Dataset split:
 - Training: first 5 blocks (200 trials)  
-- Testing: last block (40 trials)  
+- Testing: last block (40 trials)
 
-SVM replaces the traditional **maximum correlation classifier**, improving robustness especially for short signals.
+---
 
+## How to Run
+
+1. Open MATLAB  
+2. Set dataset path inside `main.m`:
+```matlab
+data_dir = "your_path_to_dataset";
+```
+
+3. Run the script:
+```matlab
+main
+```
+
+4. Choose classification mode:
+```
+Do you want to enable SVM? (1 for Yes, 0 for No)
+```
 ---
 
 ## Results
@@ -144,4 +185,9 @@ SVM replaces the traditional **maximum correlation classifier**, improving robus
 ---
 
 ## Notes
-This repository contains the project report and supporting material for an academic study on SSVEP-based BCI systems.
+This repository contains:
+- The full **MATLAB implementation**
+- Supporting functions
+- The **final project report**
+
+Developed as part of an academic project on **SSVEP-based Brain-Computer Interface systems**.
