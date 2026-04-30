@@ -49,7 +49,7 @@ Each trial duration:
 - 0.5 s post-stimulus  
 
 > The dataset is not included in this repository.  
-> You must download it separately and update the path in `main.m`.
+> You must download it separately and place it inside a folder named data/ or modify data_dir in `main.m`.
 
 ---
 
